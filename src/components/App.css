@@ -7,6 +7,7 @@
     flex: 50%;
     margin-top:25px;
     margin-left:15px;
+    height: 1px;
 }
 .button{
     height:5vh;
@@ -19,6 +20,7 @@
     height:5vh;
     width:15vh;
     background-color: palegoldenrod;
+    border-color: palegoldenrod;
     color:black;
     border-radius: 15px;
     font-weight: bold;
@@ -33,4 +35,8 @@
     height:5vh;
     width:30vh;
     font-size: larger;
+}
+.heading{
+  font-size: large;
+  font-weight: bold;
 }

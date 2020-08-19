@@ -5,18 +5,19 @@ import './App.css';
 const Content=({books})=>{
    return(
      <div className="container">
-         {books.map(book=><Card>
+         {books.map(book=><div className="card">
+         <Card>
   <Card.Img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail}/>
   <Card.Body>
-   <Card.Title>{book.volumeInfo.title}</Card.Title>
+   <Card.Title className="heading">{book.volumeInfo.title}</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    {book.volumeInfo.description}
     </Card.Text>
          <footer>Publisher: {book.volumeInfo.publisher}</footer>
-    <Button className="button">MORE</Button>
+   <a href={book.volumeInfo.infoLink}><Button className="button">MORE</Button></a>
   </Card.Body>
   </Card>
+  </div>
 )}
      </div>
    )
