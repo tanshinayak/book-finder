@@ -5,7 +5,7 @@ import './App.css';
 const Content=({books})=>{
    return(
      <div className="container">
-         {books.map(book=><Card style={{height:"500px",width:"auto"}}>
+         {books.map(book=><Card className="card">
   <Card.Img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail} style={{height:"120px",width:"100px"}}/>
   <Card.Body>
    <Card.Title className="heading" style={{height:"50px"}}>{book.volumeInfo.title}</Card.Title>

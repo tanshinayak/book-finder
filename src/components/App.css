@@ -3,10 +3,10 @@
 }
 .card{
     float: left;
-    flex: 50%;
     margin-top:25px;
     margin-left:15px;
-    height: 1px;
+    height:500px;
+    width:auto;
 }
 .button{
     height:5vh;
