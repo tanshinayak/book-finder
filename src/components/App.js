@@ -5,19 +5,17 @@ import './App.css';
 const Content=({books})=>{
    return(
      <div className="container">
-         {books.map(book=><div className="card">
-         <Card>
-  <Card.Img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail}/>
+         {books.map(book=><Card style={{height:"500px",width:"auto"}}>
+  <Card.Img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail} style={{height:"120px",width:"100px"}}/>
   <Card.Body>
-   <Card.Title className="heading">{book.volumeInfo.title}</Card.Title>
-    <Card.Text>
+   <Card.Title className="heading" style={{height:"50px"}}>{book.volumeInfo.title}</Card.Title>
+    <Card.Text style={{height:"105px",overflow:"auto"}}>
     {book.volumeInfo.description}
     </Card.Text>
-         <footer>Publisher: {book.volumeInfo.publisher}</footer>
+         <footer style={{height:"50px"}}>Publisher: {book.volumeInfo.publisher}</footer>
    <a href={book.volumeInfo.infoLink}><Button className="button">MORE</Button></a>
   </Card.Body>
   </Card>
-  </div>
 )}
      </div>
    )
