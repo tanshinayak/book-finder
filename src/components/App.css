@@ -1,10 +1,10 @@
 .container{
     display: flex;
+    flex-direction: column;
 }
 .card{
     float: left;
     margin-top:25px;
-    margin-left:15px;
     height:500px;
     width:auto;
 }
@@ -18,9 +18,9 @@
 .button1{
     height:5vh;
     width:15vh;
-    background-color: palegoldenrod;
-    border-color: palegoldenrod;
-    color:black;
+    background-color: rgb(112, 89, 54);
+    border-color: rgb(112, 89, 54);
+    color:white;
     border-radius: 15px;
     font-weight: bold;
     font-size:larger;
@@ -29,13 +29,35 @@
 .div{
      text-align: center;
 }
+html{
+    background-color: blanchedalmond;
+}
 .form{
     border-radius:15px;
     height:5vh;
     width:30vh;
     font-size: larger;
+    margin-top: 20px;
 }
-.heading{
+.headingcard{
   font-size: large;
   font-weight: bold;
+}
+.heading{
+    float: right;
+    flex: 90%;
+    text-align: center;
+}
+.headingcontainer{
+    color: whitesmoke;
+    background-color: black;
+    display: flex;
+    font-size: larger;
+    text-shadow: 1px 1px white;
+}
+.image{
+    float: right;
+    flex: 5%;
+    height: 100px;
+    width: 105px;
 }

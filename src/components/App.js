@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import {Card,Button} from 'react-bootstrap';
 import axios from "axios";
 import './App.css';
+import github from './github.png'
 const Content=({books})=>{
    return(
      <div className="container">
-         {books.map(book=><Card className="card">
-  <Card.Img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail} style={{height:"120px",width:"100px"}}/>
-  <Card.Body>
-   <Card.Title className="heading" style={{height:"50px"}}>{book.volumeInfo.title}</Card.Title>
-    <Card.Text style={{height:"105px",overflow:"auto"}}>
+         {books.map(book=><div className="card">
+  <img variant="top" src={book.volumeInfo.imageLinks.smallThumbnail} style={{height:"120px",width:"100px"}} alt="book"/>
+   <h3 className="headingcard" style={{height:"50px"}}>{book.volumeInfo.title}</h3>
+    <p style={{height:"105px",overflow:"auto"}}>
     {book.volumeInfo.description}
-    </Card.Text>
+    </p>
          <footer style={{height:"50px"}}>Publisher: {book.volumeInfo.publisher}</footer>
-   <a href={book.volumeInfo.infoLink}><Button className="button">MORE</Button></a>
-  </Card.Body>
-  </Card>
+   <a href={book.volumeInfo.infoLink}><button className="button">MORE</button></a>
+  </div>
 )}
      </div>
    )
@@ -40,7 +38,7 @@ const App=()=>{
     }
     return(
         <div className="div">
-            <h1>Book Finder</h1>
+             <Heading/>
             <form onSubmit={handlesubmit}>
                 <input type="text" value={value} onChange={handlechange} className="form"/><br/>
                 <button onClick={handlesubmit} className="button1">Search</button>
@@ -50,5 +48,14 @@ const App=()=>{
         </div>
     )
 }
-
+const Heading=()=>{
+    return (
+        <div className='headingcontainer'>
+             <h1 className='heading'>
+                    Book Finder
+            </h1>
+            <a href='https://github.com/tanshinayak'><img src={github} alt='github'className='image'></img></a>
+        </div>
+    )
+    }
 export default App;
